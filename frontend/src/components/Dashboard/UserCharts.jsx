@@ -10,12 +10,13 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
 } from 'chart.js';
 import { Pie, Bar, Doughnut, Line } from 'react-chartjs-2';
 import api from '../../services/api';
 import './Charts.css';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend, Filler);
 
 const COLORS = [
   '#2ecc71', '#3498db', '#9b59b6', '#e67e22', '#e74c3c', '#f1c40f', '#1abc9c', '#34495e'
