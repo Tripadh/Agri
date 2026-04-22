@@ -1,0 +1,18 @@
+.recommendation-panel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.recommendation-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.recommendation-item {
+  border-radius: 12px;
+  border: 1px solid #cfe4d3;
+  background: #effaf1;
+  color: #116838;
+  padding: 0.85rem 0.95rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,8 @@
+.resource-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.resource-form {
+  margin-bottom: 0.75rem;
+}

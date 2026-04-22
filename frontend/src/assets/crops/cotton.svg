@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-label="Cotton crop illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e9f0ff"/>
+      <stop offset="100%" stop-color="#d1defc"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg)"/>
+  <rect x="0" y="154" width="320" height="66" fill="#8bb88f"/>
+  <g stroke="#3e7f47" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M70 154 L70 90"/>
+    <path d="M150 154 L150 78"/>
+    <path d="M230 154 L230 92"/>
+  </g>
+  <g fill="#ffffff" stroke="#cfd4dc" stroke-width="2">
+    <circle cx="62" cy="88" r="12"/>
+    <circle cx="78" cy="84" r="12"/>
+    <circle cx="70" cy="74" r="12"/>
+    <circle cx="142" cy="76" r="12"/>
+    <circle cx="158" cy="72" r="12"/>
+    <circle cx="150" cy="62" r="12"/>
+    <circle cx="222" cy="90" r="12"/>
+    <circle cx="238" cy="86" r="12"/>
+    <circle cx="230" cy="76" r="12"/>
+  </g>
+  <text x="16" y="28" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#2f4e83">Cotton</text>
+</svg>

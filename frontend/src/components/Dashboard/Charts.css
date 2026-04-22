@@ -1,0 +1,65 @@
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: var(--surface-color, #ffffff);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color, #333);
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.chart-container canvas {
+  max-width: 100%;
+}
+
+.pie-container {
+  height: 250px;
+}
+
+.bar-container {
+  height: 300px;
+}
+
+.weather-trend-card {
+  grid-column: 1 / -1;
+}
+
+.weather-trend-container {
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-trend-container {
+    height: 320px;
+  }
+}

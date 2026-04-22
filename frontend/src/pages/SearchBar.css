@@ -1,0 +1,13 @@
+.weather-search input {
+  min-width: 0;
+}
+
+.search-bar-panel.weather-search {
+  grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 700px) {
+  .search-bar-panel.weather-search {
+    grid-template-columns: 1fr;
+  }
+}

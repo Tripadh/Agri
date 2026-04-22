@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-label="Wheat field illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff5db"/>
+      <stop offset="100%" stop-color="#ffe6a5"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bg)"/>
+  <rect x="0" y="152" width="320" height="68" fill="#dcb665"/>
+  <g stroke="#9c7a2d" stroke-width="4" stroke-linecap="round">
+    <path d="M60 152 L60 70"/>
+    <path d="M120 152 L120 60"/>
+    <path d="M180 152 L180 66"/>
+    <path d="M240 152 L240 58"/>
+  </g>
+  <g fill="#f4ce78">
+    <ellipse cx="52" cy="76" rx="9" ry="5"/>
+    <ellipse cx="68" cy="70" rx="9" ry="5"/>
+    <ellipse cx="112" cy="66" rx="9" ry="5"/>
+    <ellipse cx="128" cy="60" rx="9" ry="5"/>
+    <ellipse cx="172" cy="72" rx="9" ry="5"/>
+    <ellipse cx="188" cy="66" rx="9" ry="5"/>
+    <ellipse cx="232" cy="64" rx="9" ry="5"/>
+    <ellipse cx="248" cy="58" rx="9" ry="5"/>
+  </g>
+  <text x="16" y="28" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#624a14">Wheat</text>
+</svg>

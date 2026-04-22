@@ -1,0 +1,28 @@
+.admin-login-card {
+  width: min(560px, 100%);
+}
+
+.admin-login-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.admin-login-link {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-login-link:hover {
+  text-decoration: underline;
+}
+
+.auth-help-text {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}

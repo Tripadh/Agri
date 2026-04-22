@@ -1,0 +1,182 @@
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\components\activities\AddActivityForm.jsx:19 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  17 |   useEffect(() => {
+  18 |     if (!crops.length) {
+> 19 |       setFormData((prev) => ({ ...prev, cropId: '' }));
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  20 |     }
+  21 |   }, [crops]);
+  22 |
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\components\activities\EditActivityModal.jsx:7 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+   5 |
+   6 |   useEffect(() => {
+>  7 |     setFormData(activity || {});
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+   8 |   }, [activity]);
+   9 |
+  10 |   if (!activity) {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\components\resources\EditResourceModal.jsx:7 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+   5 |
+   6 |   useEffect(() => {
+>  7 |     setFormData(resource || {});
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+   8 |   }, [resource]);
+   9 |
+  10 |   if (!resource) {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\Activities.jsx:69 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  67 |
+  68 |   useEffect(() => {
+> 69 |     loadData();
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  70 |   }, [loadData]);
+  71 |
+  72 |   const handleAdd = async (payload) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\AdminActivities.jsx:34 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  32 |
+  33 |   useEffect(() => {
+> 34 |     loadData();
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  35 |   }, []);
+  36 |
+  37 |   const filteredActivities = useMemo(() => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\AdminResources.jsx:31 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  29 |
+  30 |   useEffect(() => {
+> 31 |     loadResources();
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |   }, []);
+  33 |
+  34 |   const filteredResources = useMemo(() => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\AdminWeatherHistory.jsx:23 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  21 |
+  22 |   useEffect(() => {
+> 23 |     loadHistory();
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  24 |   }, []);
+  25 |
+  26 |   const handleDelete = async (historyId) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\Crops.jsx:59 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  57 |
+  58 |   useEffect(() => {
+> 59 |     loadCrops();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  60 |   }, [loadCrops]);
+  61 |
+  62 |   const handleChange = (event) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\ManageCrops.jsx:15 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  13 |
+  14 |   useEffect(() => {
+> 15 |     loadCrops();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |   }, []);
+  17 |
+  18 |   const handleQuickUpdate = async (crop) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\ManageUsers.jsx:56 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  54 |
+  55 |   useEffect(() => {
+> 56 |     loadUsers();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  57 |   }, [loadUsers]);
+  58 |
+  59 |   const handleRoleChange = async (userId, role) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\Resources.jsx:58 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  56 |
+  57 |   useEffect(() => {
+> 58 |     loadResources();
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  59 |   }, [loadResources]);
+  60 |
+  61 |   const handleAdd = async (payload) => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\SearchPage.jsx:77 'titleBase' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u.
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\Weather.jsx:49 Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  47 |
+  48 |   useEffect(() => {
+> 49 |     loadWeather();
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  50 |   }, []);
+  51 |
+  52 |   const rainAlert = useMemo(() => {
+C:\Users\SATYANARAYANA\OneDrive\Desktop\trash\Agri\frontend\src\pages\Weather.jsx:50 React Hook useEffect has a missing dependency: 'loadWeather'. Either include it or remove the dependency array.

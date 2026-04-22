@@ -1,0 +1,48 @@
+.activity-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.activity-form {
+  margin-bottom: 0.75rem;
+}
+
+.activity-template-section {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f7fbf7;
+  padding: 0.95rem 1rem;
+}
+
+.activity-template-section h2 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.activity-template-section p {
+  margin: 0.28rem 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.activity-template-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.activity-template-chip {
+  border: 1px solid #cbe2cc;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1e5126;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activity-template-chip:hover {
+  background: #eaf6eb;
+  border-color: #9acaa0;
+}

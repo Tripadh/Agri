@@ -1,0 +1,49 @@
+.weather-page-shell {
+  display: grid;
+  gap: 1rem;
+  background: radial-gradient(circle at top right, #ecf7ff 0%, #ffffff 34%), #ffffff;
+}
+
+.weather-loading {
+  padding: 1.1rem;
+  border-radius: 12px;
+  background: #f3f9ff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.weather-spinner {
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 999px;
+  border: 2px solid #b8d3ef;
+  border-top-color: #2b6cb0;
+  animation: weather-spin 0.8s linear infinite;
+}
+
+.alert-banner {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #fff8e9;
+  color: #8a6500;
+  border: 1px solid #f4deb0;
+  font-weight: 600;
+}
+
+.weather-search {
+  align-items: center;
+}
+
+@keyframes weather-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .weather-page-shell {
+    padding: 0.2rem;
+  }
+}
