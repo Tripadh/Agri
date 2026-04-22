@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const GEOCODE_BASE_URL = process.env.WEATHER_GEOCODE_BASE_URL || 'https://geocoding-api.open-meteo.com/v1';
 const WEATHER_BASE_URL = process.env.WEATHER_API_BASE_URL || 'https://api.open-meteo.com/v1';
 
@@ -50,20 +52,23 @@ const resolveCity = async (city) => {
     format: 'json',
   });
 
-  const geocodeResponse = await fetch(`${GEOCODE_BASE_URL}/search?${geocodeParams.toString()}`);
+  try {
+    const response = await axios.get(`${GEOCODE_BASE_URL}/search?${geocodeParams.toString()}`, {
+      headers: { 'User-Agent': 'SmartAgricultureApp/1.0' },
+      timeout: 10000
+    });
+    
+    const cityData = response.data?.results?.[0];
 
-  if (!geocodeResponse.ok) {
+    if (!cityData) {
+      throw createWeatherError('City not found. Please enter a valid city name.', 404);
+    }
+
+    return cityData;
+  } catch (error) {
+    if (error.status === 404) throw error;
     throw createWeatherError('Unable to resolve city coordinates', 502);
   }
-
-  const geocodeData = await geocodeResponse.json();
-  const cityData = geocodeData?.results?.[0];
-
-  if (!cityData) {
-    throw createWeatherError('City not found. Please enter a valid city name.', 404);
-  }
-
-  return cityData;
 };
 
 const fetchOpenMeteoForecast = async (city) => {
@@ -78,19 +83,23 @@ const fetchOpenMeteoForecast = async (city) => {
     wind_speed_unit: 'ms',
   });
 
-  const forecastResponse = await fetch(`${WEATHER_BASE_URL}/forecast?${forecastParams.toString()}`);
+  try {
+    const response = await axios.get(`${WEATHER_BASE_URL}/forecast?${forecastParams.toString()}`, {
+      headers: { 'User-Agent': 'SmartAgricultureApp/1.0' },
+      timeout: 10000
+    });
+    
+    const forecastData = response.data;
 
-  if (!forecastResponse.ok) {
+    if (!forecastData?.current || !forecastData?.daily) {
+      throw createWeatherError('Incomplete weather data received from provider', 502);
+    }
+
+    return { cityData, forecastData };
+  } catch (error) {
+    if (error.status === 502) throw error;
     throw createWeatherError('Unable to fetch weather details from provider', 502);
   }
-
-  const forecastData = await forecastResponse.json();
-
-  if (!forecastData?.current || !forecastData?.daily) {
-    throw createWeatherError('Incomplete weather data received from provider', 502);
-  }
-
-  return { cityData, forecastData };
 };
 
 export const fetchCurrentWeather = async (city) => {
